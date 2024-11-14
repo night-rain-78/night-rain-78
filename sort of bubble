@@ -1,0 +1,13 @@
+#pragma mark - /**冒泡排序*/
+(void)mb_bubbleSort{
+    bool swapped;
+    do {
+        swapped = false;
+        for (int i = 1; i < self.count; i++) {
+            if (self.comparator(self[i - 1],self[i]) == NSOrderedDescending) {
+                swapped = true;
+                [self mb_exchangeWithIndexA:i  indexB:i- 1];
+            }
+        }
+    } while (swapped);
+}
