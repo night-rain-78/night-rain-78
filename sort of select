@@ -1,0 +1,14 @@
+#pragma mark - /**选择排序*/
+(void)mb_selectionSort
+{
+    for (int i = 0; i < self.count; i++) 
+    {
+        for (int j = i + 1; j < self.count ; j++) 
+        {
+            if (self.comparator(self[i],self[j]) == NSOrderedDescending) 
+            {
+                [self mb_exchangeWithIndexA:i  indexB:j];
+            }
+        }
+    }
+}
