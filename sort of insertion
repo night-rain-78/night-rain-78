@@ -1,0 +1,11 @@
+#pragma mark - /**插入排序*/
+- (void)mb_insertionSort{
+    for (int i = 0; i < self.count; i++) {
+        id e = self[i];
+        int j;
+        for (j = i; j > 0 && self.comparator(self[j - 1],e) == NSOrderedDescending; j--) {
+            [self mb_exchangeWithIndexA:j  indexB:j- 1];
+        }
+        self[j] = e;
+    }
+}
